@@ -1,0 +1,16 @@
+opencv-python-headless==4.9.0.80
+ultralytics          
+face_recognition     
+numpy 
+pillow
+insightface
+onnxruntime          
+
+fastapi 
+uvicorn[standard] 
+jinja2 
+python-multipart
+
+aiosqlite 
+python-dotenv
+loguru

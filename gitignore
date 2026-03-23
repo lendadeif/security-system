@@ -1,0 +1,49 @@
+# ── Virtual Environment ────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── Python ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Project Data (do NOT commit) ───────────────────────
+captures/
+logs/
+database/embeddings.pkl
+database/security.db
+database/authorized_faces/
+
+# ── Model Weights ──────────────────────────────────────
+models/
+*.pt
+*.onnx
+*.engine
+
+# ── InsightFace downloaded models ──────────────────────
+.insightface/
+
+# ── Environment & Secrets ──────────────────────────────
+.env
+*.env
+
+# ── OS Files ───────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ── Jupyter ────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
