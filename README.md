@@ -1,4 +1,4 @@
-# 🔐 AI Security System
+# AI Security System
 
 A high-scale, real-time unauthorized person detection system built with **YOLOv8**, **InsightFace (ArcFace)**, and **FastAPI** — designed to run on both Windows (development) and Raspberry Pi (deployment).
 
@@ -10,8 +10,6 @@ A high-scale, real-time unauthorized person detection system built with **YOLOv8
 - 🧠 **Face recognition** using InsightFace / ArcFace (~99.8% accuracy)
 - 👤 **Authorized persons database** with face enrollment from image or webcam
 - 🚨 **Unauthorized person alerts** with snapshot capture
-- 📊 **Live web dashboard** (coming in Step 6)
-- 🍓 **Raspberry Pi ready** (deployment in Step 8)
 - 🧵 Thread-safe camera capture for smooth multi-module access
 
 ---
@@ -81,12 +79,11 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-> ⚠️ On **Raspberry Pi**, `face_recognition` compiles dlib from source — this takes 10–20 minutes. Let it run!
 
 ### 4. Download InsightFace models (first run only)
 
 ```bash
-python run_once_download_models.py
+python IF_model.py
 ```
 
 This downloads ~300MB of ArcFace models to `~/.insightface/` — only needed once.
@@ -98,7 +95,7 @@ This downloads ~300MB of ArcFace models to `~/.insightface/` — only needed onc
 ### From webcam (recommended)
 
 ```bash
-python enroll.py --name "John Doe" --webcam
+python enroll.py --name "lenda deif" --webcam
 ```
 
 Position your face clearly, then press **SPACE** to capture.
@@ -106,7 +103,7 @@ Position your face clearly, then press **SPACE** to capture.
 ### From an existing image
 
 ```bash
-python enroll.py --name "John Doe" --image path/to/photo.jpg
+python enroll.py --name "lenda deif" --image path/to/photo.jpg
 ```
 
 ### List all enrolled persons
@@ -118,7 +115,7 @@ python enroll.py --name "" --list
 ### Remove a person
 
 ```bash
-python enroll.py --name "" --remove "John Doe"
+python enroll.py --name "" --remove "lenda deif"
 ```
 
 ---
@@ -165,10 +162,9 @@ python test_recognizer.py
 | Face Recognition | InsightFace / ArcFace |
 | Inference Engine | ONNX Runtime (CPU) |
 | Camera Capture | OpenCV + threading |
-| Web Dashboard | FastAPI + Uvicorn *(Step 6)* |
 | Database | SQLite + embeddings.pkl |
 | Logging | Loguru |
-| Deployment | Raspberry Pi 4 *(Step 8)* |
+
 
 ---
 
