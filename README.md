@@ -6,6 +6,7 @@ A high-scale, real-time unauthorized person detection system built with **YOLOv8
 
 ## 📌 Features
 
+- 👥 **Face ID** To add the authorised people into the system to capture their faces with 360 Degree
 - 🎯 **Real-time person detection** using YOLOv8-nano
 - 🧠 **Face recognition** using InsightFace / ArcFace (~99.8% accuracy)
 - 👤 **Authorized persons database** with face enrollment from image or webcam
@@ -18,6 +19,9 @@ A high-scale, real-time unauthorized person detection system built with **YOLOv8
 
 ```
 security-system/
+├── main.py
+├── FaceID.py
+├── FaceMesh.py 
 ├── config.py                   # All system settings (paths, thresholds, FPS...)
 ├── camera.py                   # Thread-safe webcam/Pi camera capture module
 ├── detector.py                 # YOLOv8-nano person detection module
@@ -95,7 +99,7 @@ This downloads ~300MB of ArcFace models to `~/.insightface/` — only needed onc
 ### From webcam (recommended)
 
 ```bash
-python enroll.py --name "lenda deif" --webcam
+python FaceID.py enroll "lenda deif" 
 ```
 
 Position your face clearly, then press **SPACE** to capture.
@@ -109,18 +113,21 @@ python enroll.py --name "lenda deif" --image path/to/photo.jpg
 ### List all enrolled persons
 
 ```bash
-python enroll.py --name "" --list
+python FaceID.py list
 ```
 
 ### Remove a person
 
 ```bash
-python enroll.py --name "" --remove "lenda deif"
+python FaceID.py  remove "lenda deif"
 ```
 
 ---
 
 ## ▶️ Running the System
+```bash
+python main.py
+```
 
 ### Test camera feed only
 
