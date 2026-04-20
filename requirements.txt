@@ -15,3 +15,5 @@ aiosqlite
 python-dotenv
 loguru
 mediapipe
+deepface
+tf-keras
