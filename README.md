@@ -104,11 +104,6 @@ python FaceID.py enroll "lenda deif"
 
 Position your face clearly, then press **SPACE** to capture.
 
-### From an existing image
-
-```bash
-python enroll.py --name "lenda deif" --image path/to/photo.jpg
-```
 
 ### List all enrolled persons
 
@@ -129,25 +124,7 @@ python FaceID.py  remove "lenda deif"
 python main.py
 ```
 
-### Test camera feed only
 
-```bash
-python test_camera.py
-```
-
-### Test person detection (YOLOv8)
-
-```bash
-python test_detector.py
-```
-
-Press **S** to save a snapshot, **Q** to quit.
-
-### Test full pipeline (detection + recognition)
-
-```bash
-python test_recognizer.py
-```
 
 ---
 
